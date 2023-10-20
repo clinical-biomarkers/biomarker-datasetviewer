@@ -1,5 +1,5 @@
 {
-    "project":"glyds",
+    "project":"biomarkerdb",
     "app_port":{
         "prd":"8080",
         "beta":"8882",
@@ -7,17 +7,17 @@
         "dev":"8080"
     },
     "api_root":{
-        "prd":"https://dsapi.glygen.org",
-        "beta":"https://beta-dsapi.glygen.org",
-        "tst":"https://dsapi.tst.glygen.org",
-        "dev":"https://dsapi.dev.glygen.org"
+        "prd":"https://api.biomarkerdb.org",
+        "beta":"https://beta-api.biomarkerdb.org",
+        "tst":"https://api.test.biomarkerdb.org",
+        "dev":"https://api.dev.biomarkerdb.org"
     },
     "app_root":{
-        "prd":"https://data.glygen.org",
-        "beta":"https://beta-data.glygen.org",
-        "tst":"https://data.tst.glygen.org",
-        "dev":"https://data.dev.glygen.org"
+        "prd":"https://data.biomarkerdb.org",
+        "beta":"https://beta-data.biomarkerdb.org",
+        "tst":"https://data.test.biomarkerdb.org",
+        "dev":"https://data.dev.biomarkerdb.org"
     },
-    "data_path":"/data/shared/glyds/"
+    "data_path":"/data/shared/biomarkerdb/"
 }
 

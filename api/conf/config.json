@@ -1,5 +1,5 @@
 {
-    "project":"biomarker",
+    "project":"biomarkerdb",
     "api_port":{
         "prd":"8081",
         "beta":"8881",
@@ -11,29 +11,29 @@
         "port":"25",
         "sender":"no-reply@glygen.gwu.edu"
     },
-    "data_path":"/data/shared/biomarker/",
+    "data_path":"/data/shared/biomarkerdb/",
     "search_options":{
         "metadata":"dataset metadata",
         "data":"dataset body"
     },
     "dbinfo":{
-        "dbname":"glydb",
+        "dbname":"biomarkerdb",
         "port":{ 
             "prd":"7070",
             "beta":"7770",
             "tst":"6060",
             "dev":"27017"
         },
-        "bridge_network":"glyds_backend",
+        "bridge_network":"biomarker_backend",
         "admin":{
             "db":"admin",
             "user":"superadmin",
             "password":"superpass"
         },
-        "glydb":{
-            "db":"glydb",
-            "user":"glydbadmin",
-            "password":"glydbpass"
+        "biomarkerdb":{
+            "db":"biomarkerdb",
+            "user":"biomarkerdbadmin",
+            "password":"biomarkerdbpass"
         }
     },
     "downloads":{
