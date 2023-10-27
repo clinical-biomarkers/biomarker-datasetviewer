@@ -1,10 +1,10 @@
 {
     "project":"biomarkerdb",
     "app_port":{
-        "prd":"8080",
+        "prd":"8088",
         "beta":"8882",
-        "tst":"8080",
-        "dev":"8080"
+        "tst":"8088",
+        "dev":"8088"
     },
     "api_root":{
         "prd":"https://api.biomarkerdb.org",
