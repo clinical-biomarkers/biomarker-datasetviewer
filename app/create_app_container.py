@@ -66,7 +66,7 @@ def main():
         cmd_list.append("mkdir -p %s" % (data_path))
 
     cmd = "npm run build"
-    cmd_list.append(cmd)
+    cmd_list.append(f"NODE_OPTIONS=--openssl-legacy-provider {cmd}")
     cmd = "docker build -t %s ." % (image)
     cmd_list.append(cmd)
 
