@@ -9,13 +9,13 @@
     "api_root":{
         "prd":"https://api.biomarkerdb.org",
         "beta":"https://beta-api.biomarkerdb.org",
-        "tst":"https://api.test.biomarkerdb.org",
+        "tst":"https://hivelab.tst.biochemistry.gwu.edu/biomarker-partnership/api",
         "dev":"https://api.dev.biomarkerdb.org"
     },
     "app_root":{
         "prd":"https://data.biomarkerdb.org",
         "beta":"https://beta-data.biomarkerdb.org",
-        "tst":"https://data.test.biomarkerdb.org",
+        "tst":"https:hivelab.tst.biochemistry.gwu.edu/biomarker-partnership/data",
         "dev":"https://data.dev.biomarkerdb.org"
     },
     "data_path":"/data/shared/biomarkerdb/"
