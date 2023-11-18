@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, Blueprint
 from flask_jwt_extended import JWTManager
 from flask_cors import CORS
 
@@ -18,7 +18,8 @@ def create_app():
     #CORS(app, supports_credentials=True)
     CORS(app)
 
-    api = Api(app, version='1.0', title='GlyGen Dataset APIs', description='Documentation for the GlyGen Dataset APIs',)
+    blueprint = Blueprint('api', __name__, url_prefix = '/biomarker-partnership/api')
+    api = Api(blueprint, version='1.0', title='GlyGen Dataset APIs', description='Documentation for the GlyGen Dataset APIs',)
     api.add_namespace(dataset_api)
 
     try:
