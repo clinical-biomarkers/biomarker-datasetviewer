@@ -19,7 +19,8 @@ def create_app():
     CORS(app)
 
     blueprint = Blueprint('api', __name__, url_prefix = '/biomarker-partnership/api')
-    api = Api(blueprint, version='1.0', title='GlyGen Dataset APIs', description='Documentation for the GlyGen Dataset APIs',)
+    api = Api(blueprint, version='1.0', title='GlyGen Dataset APIs', description='Documentation for the GlyGen Dataset APIs')
+    app.register_blueprint(blueprint)
     api.add_namespace(dataset_api)
 
     try:
