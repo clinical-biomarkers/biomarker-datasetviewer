@@ -38,9 +38,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // DEBUGGING 
-    console.log(`ROOT URL FROM .env: ${process.env.REACT_APP_ROOT_URL}`)
-    
     var reqObj = {};
     const requestOptions = {
       method: 'POST',
