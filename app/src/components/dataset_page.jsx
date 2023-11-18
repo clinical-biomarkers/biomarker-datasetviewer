@@ -66,6 +66,7 @@ class DatasetPage extends Component {
       body: JSON.stringify(reqObj)
     };
     const svcUrl = LocalConfig.apiHash.dataset_detail;
+    console.log('Making API call to: ', svcUrl, requestOptions);
 
     fetch(svcUrl, requestOptions)
       .then((res) => res.json())
