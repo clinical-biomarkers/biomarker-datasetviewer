@@ -20,11 +20,11 @@ def create_app():
     #CORS(app, supports_credentials=True)
     CORS(app)
 
-    logging.basicConfig(level = logging.DEBUG)
-    app.logger.debug(f'STATIC FOLDER: {app.static_folder}')
-    app.logger.debug(f'STATIC URL PATH: {app.static_url_path}')
-    app.logger.debug(f'APIDOC STATIC URL PATH: {apidoc._static_url_path}')
-    app.logger.debug(f'APIDOC STATIC FOLDER: {apidoc.static_folder}')
+    # logging.basicConfig(level = logging.DEBUG)
+    # app.logger.debug(f'STATIC FOLDER: {app.static_folder}')
+    # app.logger.debug(f'STATIC URL PATH: {app.static_url_path}')
+    # app.logger.debug(f'APIDOC STATIC URL PATH: {apidoc._static_url_path}')
+    # app.logger.debug(f'APIDOC STATIC FOLDER: {apidoc.static_folder}')
     api = Api(app, version='1.0', title='GlyGen Dataset APIs', description='Documentation for the GlyGen Dataset APIs')
     api.add_namespace(dataset_api)
     # apidoc.static_url_path = '/biomarker-partnership/api'
@@ -51,20 +51,20 @@ def create_app():
     from . import gsd
     app.register_blueprint(gsd.bp)
 
-    @app.before_request
-    def log_request_info():
-        app.logger.debug('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
-        app.logger.debug('HEADERS: %s', request.headers)
-        app.logger.debug('BODY: %s', request.get_data())
-        app.logger.debug('REQUEST PATH: %s', request.path)
-        app.logger.debug('FULL PATH: %s', request.url)
+    # @app.before_request
+    # def log_request_info():
+    #     app.logger.debug('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+    #     app.logger.debug('HEADERS: %s', request.headers)
+    #     app.logger.debug('BODY: %s', request.get_data())
+    #     app.logger.debug('REQUEST PATH: %s', request.path)
+    #     app.logger.debug('FULL PATH: %s', request.url)
     
-    @app.after_request
-    def log_response_info(response):
-        app.logger.debug('-----------------------------------------------------------------------------------------')
-        app.logger.debug('STATUS %s', response.status)
-        app.logger.debug('HEADERS %s', response.headers)
-        return response 
+    # @app.after_request
+    # def log_response_info(response):
+    #     app.logger.debug('-----------------------------------------------------------------------------------------')
+    #     app.logger.debug('STATUS %s', response.status)
+    #     app.logger.debug('HEADERS %s', response.headers)
+    #     return response 
 
     app.add_url_rule('/', endpoint='index')
 
