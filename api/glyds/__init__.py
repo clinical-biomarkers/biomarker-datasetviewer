@@ -25,7 +25,7 @@ def create_app():
     app.logger.debug(f'STATIC URL PATH: {app.static_url_path}')
     app.logger.debug(f'APIDOC STATIC URL PATH: {apidoc._static_url_path}')
     app.logger.debug(f'APIDOC STATIC FOLDER: {apidoc.static_folder}')
-    api = Api(app, doc = '/biomarker-partnership/api', version='1.0', title='GlyGen Dataset APIs', description='Documentation for the GlyGen Dataset APIs')
+    api = Api(app, version='1.0', title='GlyGen Dataset APIs', description='Documentation for the GlyGen Dataset APIs')
     api.add_namespace(dataset_api)
     # apidoc.static_url_path = '/biomarker-partnership/api'
 
