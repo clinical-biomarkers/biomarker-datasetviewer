@@ -59,39 +59,58 @@ class DatasetPage extends Component {
     this.fetchPageData(reqObj); 
   }
 
-
-
-  fetchPageData(reqObj){
-
-
-    const requestOptions = { 
+  fetchPageData(reqObj) {
+    const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(reqObj)
     };
     const svcUrl = LocalConfig.apiHash.dataset_detail;
+    console.log('Making API call to: ', svcUrl, requestOptions);
 
+    fetch(svcUrl, requestOptions)
+      .then((res) => res.json())
+      .then((result) => {
+        var tmpState = {...this.state}; // Create a copy of the current state
 
-    fetch(svcUrl, requestOptions).then((res) => res.json()).then(
-        (result) => {
-            //console.log("Request:",svcUrl);
-            //console.log("Ajax response:", result);
-            var tmpState = this.state;
-            tmpState.response = result;
-            tmpState.bco = result.record.bco;
-            tmpState.isLoaded = true;          
-            if (tmpState.response.status === 0){
-                tmpState.dialog.status = true;
-                tmpState.dialog.msg = tmpState.response.error;
-            }
-            this.setState(tmpState);
-        },
-        (error) => { 
-            this.setState({isLoaded: true,error,});
+        // Check if the expected data is present
+        if (result && result.record && result.record.bco) {
+          tmpState.response = result;
+          tmpState.bco = result.record.bco;
+          tmpState.isLoaded = true;
+          // Check for a status in the response indicating an error
+          if (result.status === 0) {
+            tmpState.dialog = {
+              status: true,
+              msg: result.error || 'An error occurred',
+            };
+          }
+        } else {
+          // Handle the case where the expected data structure is not present
+          console.error('Invalid structure received from fetch:', result);
+          tmpState.bco = {}; // Provide a default empty object or another appropriate default value
+          tmpState.isLoaded = true;
+          tmpState.dialog = {
+            status: true,
+            msg: 'Invalid data structure received from the server.',
+          };
         }
-    );
-
+        this.setState(tmpState); // Update the state with the new temporary state
+      })
+      .catch((error) => {
+        // Handle the fetch error
+        console.error('Fetch error:', error);
+        this.setState({
+          isLoaded: true,
+          error: error,
+          dialog: {
+            status: true,
+            msg: 'Failed to load data: ' + error.message,
+          },
+        });
+      });
   }
+
 
  handleDownloadBco = (e) => {
     e.preventDefault();

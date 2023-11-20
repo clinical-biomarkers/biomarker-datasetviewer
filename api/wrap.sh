@@ -1,7 +1,7 @@
-prj="glyds"
-srv="prd"
+prj="biomarkerdb"
+# srv="prd"
 #srv="beta"
-#srv="tst"
+srv="tst"
 
 
 sudo systemctl stop docker-$prj-api-$srv.service
