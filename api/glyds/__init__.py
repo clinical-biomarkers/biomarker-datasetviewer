@@ -57,6 +57,14 @@ def create_app():
         app.logger.debug('HEADERS: %s', request.headers)
         app.logger.debug('BODY: %s', request.get_data())
         app.logger.debug('REQUEST PATH: %s', request.path)
+        app.logger.debug('FULL PATH: %s', request.url)
+    
+    @app.after_request
+    def log_response_info(response):
+        app.logger.debug('-----------------------------------------------------------------------------------------')
+        app.logger.debug('STATUS %s', response.status)
+        app.logger.debug('HEADERS %s', response.headers)
+        return response 
 
     app.add_url_rule('/', endpoint='index')
 
