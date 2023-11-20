@@ -2,15 +2,15 @@ FROM nginx:1.21.0-alpine as production
 
 ENV NODE_ENV production
 
-RUN mkdir -p /data/shared/glyds
+RUN mkdir -p /data/shared/biomarkerdb
 
-RUN ln -s /data/shared/glyds /usr/share/nginx/html/ln2data
+RUN ln -s /data/shared/biomarkerdb /usr/share/nginx/html/ln2data
 
-RUN ln -s /data/shared/glyds/releases /usr/share/nginx/html/ln2releases
+RUN ln -s /data/shared/biomarkerdb/releases /usr/share/nginx/html/ln2releases
 
-RUN ln -s /data/shared/glyds/downloads /usr/share/nginx/html/ln2downloads
+RUN ln -s /data/shared/biomarkerdb/downloads /usr/share/nginx/html/ln2downloads
 
-RUN ln -s /data/shared/glyds/releases/ftp /usr/share/nginx/html/ftp
+RUN ln -s /data/shared/biomarkerdb/releases/ftp /usr/share/nginx/html/ftp
 
 COPY ./build /usr/share/nginx/html
 

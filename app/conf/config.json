@@ -15,7 +15,7 @@
     "app_root":{
         "prd":"https://data.biomarkerdb.org",
         "beta":"https://beta-data.biomarkerdb.org",
-        "tst":"https:hivelab.tst.biochemistry.gwu.edu/biomarker-partnership/data",
+        "tst":"https://hivelab.tst.biochemistry.gwu.edu/biomarker-partnership/data",
         "dev":"https://data.dev.biomarkerdb.org"
     },
     "data_path":"/data/shared/biomarkerdb/"

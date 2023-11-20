@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.a617e044.chunk.css",
-    "main.js": "/static/js/main.fcf43d05.chunk.js",
-    "main.js.map": "/static/js/main.fcf43d05.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.e1c23cd2.js",
-    "runtime-main.js.map": "/static/js/runtime-main.e1c23cd2.js.map",
-    "static/css/2.455652b6.chunk.css": "/static/css/2.455652b6.chunk.css",
-    "static/js/2.82eb919a.chunk.js": "/static/js/2.82eb919a.chunk.js",
-    "static/js/2.82eb919a.chunk.js.map": "/static/js/2.82eb919a.chunk.js.map",
-    "static/js/3.3ab2fe13.chunk.js": "/static/js/3.3ab2fe13.chunk.js",
-    "static/js/3.3ab2fe13.chunk.js.map": "/static/js/3.3ab2fe13.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.455652b6.chunk.css.map": "/static/css/2.455652b6.chunk.css.map",
-    "static/css/main.a617e044.chunk.css.map": "/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.82eb919a.chunk.js.LICENSE.txt": "/static/js/2.82eb919a.chunk.js.LICENSE.txt"
+    "main.css": "/biomarker-partnership/data/static/css/main.a617e044.chunk.css",
+    "main.js": "/biomarker-partnership/data/static/js/main.ec1cdeea.chunk.js",
+    "main.js.map": "/biomarker-partnership/data/static/js/main.ec1cdeea.chunk.js.map",
+    "runtime-main.js": "/biomarker-partnership/data/static/js/runtime-main.128eff15.js",
+    "runtime-main.js.map": "/biomarker-partnership/data/static/js/runtime-main.128eff15.js.map",
+    "static/css/2.455652b6.chunk.css": "/biomarker-partnership/data/static/css/2.455652b6.chunk.css",
+    "static/js/2.76f30a85.chunk.js": "/biomarker-partnership/data/static/js/2.76f30a85.chunk.js",
+    "static/js/2.76f30a85.chunk.js.map": "/biomarker-partnership/data/static/js/2.76f30a85.chunk.js.map",
+    "static/js/3.3ab2fe13.chunk.js": "/biomarker-partnership/data/static/js/3.3ab2fe13.chunk.js",
+    "static/js/3.3ab2fe13.chunk.js.map": "/biomarker-partnership/data/static/js/3.3ab2fe13.chunk.js.map",
+    "index.html": "/biomarker-partnership/data/index.html",
+    "static/css/2.455652b6.chunk.css.map": "/biomarker-partnership/data/static/css/2.455652b6.chunk.css.map",
+    "static/css/main.a617e044.chunk.css.map": "/biomarker-partnership/data/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.76f30a85.chunk.js.LICENSE.txt": "/biomarker-partnership/data/static/js/2.76f30a85.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e1c23cd2.js",
+    "static/js/runtime-main.128eff15.js",
     "static/css/2.455652b6.chunk.css",
-    "static/js/2.82eb919a.chunk.js",
+    "static/js/2.76f30a85.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.fcf43d05.chunk.js"
+    "static/js/main.ec1cdeea.chunk.js"
   ]
 }
