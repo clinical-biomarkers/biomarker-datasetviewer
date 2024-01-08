@@ -126,6 +126,7 @@ class HistoryList extends Component {
 
 
 
+    // </div></div>+this.props.pageId} className="reglink">{pageIdLabel}
     return (
       <div className="pagecn">
         <Alertdialog dialog={this.state.dialog} onClose={this.handleDialogClose}/>
@@ -136,7 +137,7 @@ class HistoryList extends Component {
           &nbsp;
           <Link to="/biomarker-partnership/data" className="reglink">HOME </Link> 
             &nbsp; / &nbsp;
-          <Link to={"/static/"+this.props.pageId} className="reglink">{pageIdLabel}</Link> 
+          <Link to="/biomarker-partnership/data/history_list">{pageIdLabel}</Link> 
         </div>
 
 
