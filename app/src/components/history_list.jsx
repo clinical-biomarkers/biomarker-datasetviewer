@@ -137,7 +137,7 @@ class HistoryList extends Component {
           &nbsp;
           <Link to="/biomarker-partnership/data" className="reglink">HOME </Link> 
             &nbsp; / &nbsp;
-          <Link to="/biomarker-partnership/data/history_list">{pageIdLabel}</Link> 
+          <Link to="/biomarker-partnership/data/history_list" className="reglink">{pageIdLabel}</Link> 
         </div>
 
 
