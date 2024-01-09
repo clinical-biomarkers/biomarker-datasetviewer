@@ -328,9 +328,9 @@ class DatasetPage extends Component {
         <div className="leftblock" style={{width:"100%", borderBottom:"1px solid #ccc"}}>
           <DoubleArrowOutlinedIcon style={{color:"#2358C2", fontSize:"17px" }}/>
           &nbsp;
-          <Link to="/" className="reglink">HOME </Link> 
+          <Link to="/biomarker-partnership/data" className="reglink">HOME </Link> 
             &nbsp; / &nbsp;
-          <Link to={"/"+this.props.bcoId} className="reglink">{this.props.bcoId}</Link> 
+          <Link to={"/biomarker-partnership/data/"+this.props.bcoId} className="reglink">{this.props.bcoId}</Link> 
         </div>
         <div className="leftblock" style={{width:"100%", margin:"40px 0px 0px 0px"}}>
           <span>{selectedFileName}</span><br/>
