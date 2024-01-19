@@ -209,7 +209,7 @@ class DatasetPage extends Component {
   
 
     var readMe = (extractObj !== undefined ? extractObj.readme : undefined); 
-    var downloadUrl = (extractObj !== undefined ? extractObj.downloadurl : undefined);
+    var downloadUrl = (extractObj !== undefined ? extractObj.downloadurl.replace('ln2data', 'biomarker-partnership/data/ln2data') : undefined);
     var bcoTitle = (extractObj !== undefined ? extractObj.title : undefined);
     //var bcoDescription = (extractObj !== undefined ? extractObj.description : undefined);
     var bcoDescription = "";
