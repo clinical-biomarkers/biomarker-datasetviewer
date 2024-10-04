@@ -22,7 +22,7 @@
             "prd":"7070",
             "beta":"7770",
             "tst":"6060",
-            "dev":"27017"
+            "dev":"6060"
         },
         "bridge_network":"biomarker_backend",
         "admin":{
