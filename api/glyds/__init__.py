@@ -42,6 +42,9 @@ def create_app():
     jwt = JWTManager(app)
 
     app.config['MONGODB_CONNSTRING'] = os.getenv('MONGODB_CONNSTRING', default=None)
+    app.config['DB_NAME'] = os.getenv('DB_NAME', default=None)
+    app.config['DATA_PATH'] = os.getenv('DATA_PATH', default=None)
+    app.config['SERVER'] = os.getenv('SERVER', default=None)
 
 
     from . import db
