@@ -41,6 +41,7 @@ def create_app():
 
     jwt = JWTManager(app)
 
+    app.config['MONGODB_CONNSTRING'] = os.getenv('MONGODB_CONNSTRING', default=None)
 
 
     from . import db
