@@ -85,6 +85,7 @@ class DatasetPage extends Component {
               msg: result.error || 'An error occurred',
             };
           }
+          console.log(`${tmpState}`);
         } else {
           // Handle the case where the expected data structure is not present
           console.error('Invalid structure received from fetch:', result);
