@@ -298,6 +298,8 @@ class DatasetPage extends Component {
       var verOptions = [];
       //var verList = sortReleaseList(Object.keys(historyObj), false);
       var verList = sortReleaseList(this.props.initObj.versionlist, false);
+      console.log("ver list");
+      console.log(verList);
       var selectedVer = (this.state.ver !== "" ? this.state.ver.split(".").join("_") : verList[0].split(".").join("_"));
       for (var i in verList ){
         var ver = verList[i].split(".").join("_");
