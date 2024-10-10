@@ -297,6 +297,8 @@ class DatasetPage extends Component {
     if (historyObj !== undefined){
       var verOptions = [];
       //var verList = sortReleaseList(Object.keys(historyObj), false);
+      console.log("init ver list");
+      console.log(this.props.initObj.versionlist);
       var verList = sortReleaseList(this.props.initObj.versionlist, false);
       console.log("ver list");
       console.log(verList);
