@@ -85,7 +85,7 @@ class DatasetPage extends Component {
               msg: result.error || 'An error occurred',
             };
           }
-          console.log(`result valid: ${result}\nbco: ${result.record_bco}\nrecord: ${result.record}`);
+          console.log(`result valid: ${result}\nbco: ${result.record.bco}\nrecord: ${result.record}`);
         } else {
           // Handle the case where the expected data structure is not present
           console.error('Invalid structure received from fetch:', result);
