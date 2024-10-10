@@ -7,16 +7,16 @@
         "dev":"8088"
     },
     "api_root":{
-        "prd":"https://biomarkerdb.org/dsapi",
-        "beta":"https://beta.biomarkerdb.org/dsapi",
+        "prd":"https://biomarkerkb.org/dsapi",
+        "beta":"https://beta.biomarkerkb.org/dsapi",
         "tst":"https://hivelab.tst.biochemistry.gwu.edu/biomarker-partnership/api",
-        "dev":"https://dev.biomarkerdb.org/dsapi"
+        "dev":"https://dev.biomarkerkb.org/dsapi"
     },
     "app_root":{
-        "prd":"https://data.biomarkerdb.org",
-        "beta":"https://beta.data.biomarkerdb.org",
+        "prd":"https://data.biomarkerkb.org",
+        "beta":"https://beta.data.biomarkerkb.org",
         "tst":"https://hivelab.tst.biochemistry.gwu.edu/biomarker-partnership/data",
-        "dev":"https://dev.biomarkerdb.org/data"
+        "dev":"https://dev.biomarkerkb.org/data"
     },
     "data_path":"/data/shared/biomarkerdb/"
 }
