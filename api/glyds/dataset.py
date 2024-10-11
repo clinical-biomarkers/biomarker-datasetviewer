@@ -450,7 +450,7 @@ class HistoryList(Resource):
                 if ver_two in obj["history"]:
                     row = [obj["bcoid"]]
                     for f in f_list:
-                        row.append(obj["history"][ver_two][f])
+                        row.append(obj["history"][ver_two].get(f, 0))
                     row.append("<a href=\"/data/%s/%s/history\">details</a>" % (obj["bcoid"],ver_one))
                     match_flag = True
                     idx_list = []
