@@ -109,7 +109,7 @@ class DatasetSearch extends Component {
           }
           else{
             //alert("/results/" + result.list_id);
-            window.location.href = "/biomarker-partnership/data/results/" + result.list_id;
+            window.location.href = "/data/results/" + result.list_id;
           }
           this.setState(tmpState);
           //console.log("Request:",svcUrl);

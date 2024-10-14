@@ -93,9 +93,9 @@ class StaticPage extends Component {
           fontSize:"17px", borderBottom:"1px solid #ccc"}}>
           <DoubleArrowOutlinedIcon style={{color:"#2358C2", fontSize:"17px" }}/>
           &nbsp;
-          <Link to="/biomarker-partnership/data" className="reglink">HOME </Link> 
+          <Link to="/data" className="reglink">HOME </Link> 
             &nbsp; / &nbsp;
-          <Link to={"/biomarker-partnership/data/static/"+this.props.pageId} className="reglink">{pageIdLabel}</Link> 
+          <Link to={"/data/static/"+this.props.pageId} className="reglink">{pageIdLabel}</Link> 
         </div>
 
         <div className="leftblock" style={{width:"100%", margin:"40px 0px 0px 0px"}}>

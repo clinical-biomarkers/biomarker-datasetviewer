@@ -85,6 +85,7 @@ class DatasetPage extends Component {
               msg: result.error || 'An error occurred',
             };
           }
+          console.log(`result valid: ${result}\nbco: ${result.record.bco}\nrecord: ${result.record}`);
         } else {
           // Handle the case where the expected data structure is not present
           console.error('Invalid structure received from fetch:', result);
@@ -209,7 +210,7 @@ class DatasetPage extends Component {
   
 
     var readMe = (extractObj !== undefined ? extractObj.readme : undefined); 
-    var downloadUrl = (extractObj !== undefined ? extractObj.downloadurl.replace('ln2data', 'biomarker-partnership/data/ln2data') : undefined);
+    var downloadUrl = (extractObj !== undefined ? extractObj.downloadurl.replace('ln2data', '/data/ln2data') : undefined);
     var bcoTitle = (extractObj !== undefined ? extractObj.title : undefined);
     //var bcoDescription = (extractObj !== undefined ? extractObj.description : undefined);
     var bcoDescription = "";
@@ -296,7 +297,11 @@ class DatasetPage extends Component {
     if (historyObj !== undefined){
       var verOptions = [];
       //var verList = sortReleaseList(Object.keys(historyObj), false);
+      console.log("init ver list");
+      console.log(this.props.initObj.versionlist);
       var verList = sortReleaseList(this.props.initObj.versionlist, false);
+      console.log("ver list");
+      console.log(verList);
       var selectedVer = (this.state.ver !== "" ? this.state.ver.split(".").join("_") : verList[0].split(".").join("_"));
       for (var i in verList ){
         var ver = verList[i].split(".").join("_");
@@ -328,9 +333,9 @@ class DatasetPage extends Component {
         <div className="leftblock" style={{width:"100%", borderBottom:"1px solid #ccc"}}>
           <DoubleArrowOutlinedIcon style={{color:"#2358C2", fontSize:"17px" }}/>
           &nbsp;
-          <Link to="/biomarker-partnership/data" className="reglink">HOME </Link> 
+          <Link to="/data" className="reglink">HOME </Link> 
             &nbsp; / &nbsp;
-          <Link to={"/biomarker-partnership/data/"+this.props.bcoId} className="reglink">{this.props.bcoId}</Link> 
+          <Link to={"/data/"+this.props.bcoId} className="reglink">{this.props.bcoId}</Link> 
         </div>
         <div className="leftblock" style={{width:"100%", margin:"40px 0px 0px 0px"}}>
           <span>{selectedFileName}</span><br/>

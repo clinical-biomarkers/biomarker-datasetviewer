@@ -45,6 +45,7 @@ class App extends Component {
       body: JSON.stringify(reqObj)
     };
     const svcUrl = LocalConfig.apiHash.dataset_init;
+    console.log(svcUrl);
 
     fetch(svcUrl, requestOptions)
       .then((res) => res.json())
@@ -89,57 +90,57 @@ class App extends Component {
       <Router>
         <Switch>
         <Route
-            path="/biomarker-partnership/data/gsd"
+            path="/data/gsd"
             render={(props) => (
               <Gsd initObj={this.state.response.record}/>
             )}
           />
           <Route
-            path="/biomarker-partnership/data/glycan_finder"
+            path="/data/glycan_finder"
             render={(props) => (
               <GlycanFinder pageId={"glycanfinder"} initObj={this.state.response.record}/>
             )}
           />
           <Route
-            path="/biomarker-partnership/data/uploads"
+            path="/data/uploads"
             render={(props) => (
               <FileUploads pageId={"File Uploads"} initObj={this.state.response.record}/>
             )}
           />
           <Route
-            path="/biomarker-partnership/data/history_list"
+            path="/data/history_list"
             render={(props) => (
               <HistoryList pageId={"History List"}  initObj={this.state.response.record}/>
             )}
           />
         <Route
             exact
-            path="/biomarker-partnership/data/results/:listId"
+            path="/data/results/:listId"
             render={(props) => (
             <DatasetList  initObj={this.state.response.record} listId={props.match.params.listId}/>
             )}
           />
         <Route
-            path="/biomarker-partnership/data/:bcoId/:dataVersion/history"
+            path="/data/:bcoId/:dataVersion/history"
             render={(props) => (
               <HistoryDetail bcoId={props.match.params.bcoId} dataVersion={props.match.params.dataVersion}  initObj={this.state.response.record}/>
             )}
           />
           <Route
-            path="/biomarker-partnership/data/static/:pageId"
+            path="/data/static/:pageId"
             render={(props) => (
               <StaticPage pageId={props.match.params.pageId}  initObj={this.state.response.record}/>
             )}
         />
         <Route
-            path="/biomarker-partnership/data/:bcoId"
+            path="/data/:bcoId"
             render={(props) => (
               <RecordList bcoId={props.match.params.bcoId} initObj={this.state.response.record}/>
             )}
         />
         <Route
             exact
-            path="/biomarker-partnership/data/"
+            path="/data/"
             render={(props) => (
               <DatasetSearch  initObj={this.state.response.record}/>
             )}
