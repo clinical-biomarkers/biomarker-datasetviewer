@@ -8,9 +8,9 @@
     },
     "api_root":{
         "prd":"https://data.biomarkerkb.org/dsapi",
-        "beta":"https://beta.data.biomarkerkb.org/dsapi",
+        "beta":"https://data.beta.biomarkerkb.org/dsapi",
         "tst":"https://hivelab.tst.biochemistry.gwu.edu/biomarker-partnership/api",
-        "dev":"https://dev.data.biomarkerkb.org/dsapi"
+        "dev":"https://data.dev.biomarkerkb.org/dsapi"
     },
     "app_root":{
         "prd":"https://data.biomarkerkb.org",
