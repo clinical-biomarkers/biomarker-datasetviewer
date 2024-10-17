@@ -63,7 +63,7 @@ export function getColumns(key){
               className="reglink"
               to={
                 {
-                  pathname: "/data/" + params.value.bcoid,
+                  pathname: "/" + params.value.bcoid,
                   state: {rowlist: params.value.rowlist}
                 }
               }

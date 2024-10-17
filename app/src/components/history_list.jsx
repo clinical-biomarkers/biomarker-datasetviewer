@@ -135,9 +135,9 @@ class HistoryList extends Component {
           fontSize:"17px", borderBottom:"1px solid #ccc"}}>
           <DoubleArrowOutlinedIcon style={{color:"#2358C2", fontSize:"17px" }}/>
           &nbsp;
-          <Link to="/data" className="reglink">HOME </Link> 
+          <Link to="/" className="reglink">HOME </Link> 
             &nbsp; / &nbsp;
-          <Link to="/data/history_list" className="reglink">{pageIdLabel}</Link> 
+          <Link to="/history_list" className="reglink">{pageIdLabel}</Link> 
         </div>
 
 

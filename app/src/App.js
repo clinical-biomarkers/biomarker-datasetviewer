@@ -90,57 +90,57 @@ class App extends Component {
       <Router>
         <Switch>
         <Route
-            path="/data/gsd"
+            path="/gsd"
             render={(props) => (
               <Gsd initObj={this.state.response.record}/>
             )}
           />
           <Route
-            path="/data/glycan_finder"
+            path="/glycan_finder"
             render={(props) => (
               <GlycanFinder pageId={"glycanfinder"} initObj={this.state.response.record}/>
             )}
           />
           <Route
-            path="/data/uploads"
+            path="/uploads"
             render={(props) => (
               <FileUploads pageId={"File Uploads"} initObj={this.state.response.record}/>
             )}
           />
           <Route
-            path="/data/history_list"
+            path="/history_list"
             render={(props) => (
               <HistoryList pageId={"History List"}  initObj={this.state.response.record}/>
             )}
           />
         <Route
             exact
-            path="/data/results/:listId"
+            path="/results/:listId"
             render={(props) => (
             <DatasetList  initObj={this.state.response.record} listId={props.match.params.listId}/>
             )}
           />
         <Route
-            path="/data/:bcoId/:dataVersion/history"
+            path="/:bcoId/:dataVersion/history"
             render={(props) => (
               <HistoryDetail bcoId={props.match.params.bcoId} dataVersion={props.match.params.dataVersion}  initObj={this.state.response.record}/>
             )}
           />
           <Route
-            path="/data/static/:pageId"
+            path="/static/:pageId"
             render={(props) => (
               <StaticPage pageId={props.match.params.pageId}  initObj={this.state.response.record}/>
             )}
         />
         <Route
-            path="/data/:bcoId"
+            path="/:bcoId"
             render={(props) => (
               <RecordList bcoId={props.match.params.bcoId} initObj={this.state.response.record}/>
             )}
         />
         <Route
             exact
-            path="/data/"
+            path="/"
             render={(props) => (
               <DatasetSearch  initObj={this.state.response.record}/>
             )}
