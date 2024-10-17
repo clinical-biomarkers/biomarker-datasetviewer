@@ -7,10 +7,10 @@
         "dev":"8088"
     },
     "api_root":{
-        "prd":"https://biomarkerkb.org/dsapi",
-        "beta":"https://beta.biomarkerkb.org/dsapi",
+        "prd":"https://data.biomarkerkb.org/dsapi",
+        "beta":"https://beta.data.biomarkerkb.org/dsapi",
         "tst":"https://hivelab.tst.biochemistry.gwu.edu/biomarker-partnership/api",
-        "dev":"https://dev.biomarkerkb.org/dsapi"
+        "dev":"https://dev.data.biomarkerkb.org/dsapi"
     },
     "app_root":{
         "prd":"https://data.biomarkerkb.org",
