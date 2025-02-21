@@ -1,4 +1,0 @@
-
- ... started loading c_history  [2023-10-01 14:09:10.969354]
- ... loaded 1000/1264 documents to c_history_v-2.2.1 (from historydb) [2023-10-01 14:09:12.632759]
- ... finished loading 1264/1264 documents to c_history_v-2.2.1 (from historydb) [2023-10-01 14:09:12.911427]
