@@ -45,6 +45,9 @@ class App extends Component {
       body: JSON.stringify(reqObj)
     };
     const svcUrl = LocalConfig.apiHash.dataset_init;
+    console.log(process.env.REACT_APP_API_URL);
+    console.log(process.env.REACT_APP_SERVER);
+    console.log(LocalConfig);
     console.log(svcUrl);
 
     fetch(svcUrl, requestOptions)
