@@ -51,6 +51,10 @@ def main():
     container = "running_" + image
     app_port = config_obj["app_port"][server]
     data_path = config_obj["data_path"]
+
+    app_url = config_obj["app_root"][server]
+    api_url = config_obj["api_root"][server]
+    print(f"Server: {server}\nApp URL: {app_url}\nAPI URL: {api_url}")
    
     with open(".env.production", "w") as FW:
         FW.write("REACT_APP_SERVER=%s\n" % (server))
